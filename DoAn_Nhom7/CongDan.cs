@@ -89,8 +89,13 @@ namespace DoAn_Nhom7
             this.NgheNghiep = ngheNghiep;
             this.Luong = luong;
         }
-        public CongDan(string Cmnd) 
+        public CongDan(string Cmnd,string HoTen) 
         {            
+            this.cmnd = Cmnd;
+            this.hoTen=HoTen;
+        }
+        public CongDan(string Cmnd)
+        {
             this.cmnd = Cmnd;
         }
         ~CongDan()

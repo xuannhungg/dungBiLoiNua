@@ -250,7 +250,6 @@
             this.txtCMNDB.Name = "txtCMNDB";
             this.txtCMNDB.Size = new System.Drawing.Size(161, 22);
             this.txtCMNDB.TabIndex = 23;
-            this.txtCMNDB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMNDB_KeyDown);
             // 
             // txtNgayNoiCapB
             // 

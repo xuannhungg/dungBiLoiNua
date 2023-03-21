@@ -98,6 +98,22 @@ namespace DoAn_Nhom7
             }
             conn.Close();
         }
+        public string CMNDVoChong(string cmnd)
+        {
+            conn.Open();
+            string a="";
+            string sqlStr = "Select * from CongDan where cmnd = '" + cmnd+ "'";
+            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            SqlDataReader dta = cmd.ExecuteReader();
+            if(dta.Read())
+            {
+                a= Convert.ToString(dta["tinhTrangHonNhan"]);
+                conn.Close();
+                a = a.Substring(30);
+            } 
+            return a;
+
+        }
         public bool KiemTraHonNhan(string cmnd)
         {
             conn.Open();
@@ -108,22 +124,22 @@ namespace DoAn_Nhom7
             {
                 string a = Convert.ToString(dta["tinhTrangHonNhan"]);
                 conn.Close();
-                if (a == "Da Ket Hon")
+                if (a == "Doc Than")
                     return true;
             }
             conn.Close();
             return false;
         }
-        public void LapDayThongTinLyHon(TextBox cmnd, TextBox a, TextBox b, TextBox f)
+        public void LapDayThongTinLyHon(string cmnd, TextBox a, TextBox b, TextBox f)
         {
             conn.Open();
-            string sqlStr = "Select * from CongDan where cmnd = '" + cmnd.Text + "'";
+            string sqlStr = "Select * from CongDan where cmnd = '" + cmnd + "'";
             SqlCommand cmd = new SqlCommand(sqlStr, conn);
             SqlDataReader dta = cmd.ExecuteReader();
             while (dta.Read())
             {
                 a.Text = Convert.ToString(dta["hoTen"]);
-                b.Text = Convert.ToString(dta["ngayThangNamSinh"]); ;
+                b.Text = Convert.ToString(dta["ngayThangNamSinh"]); 
                 f.Text = Convert.ToString(dta["noiThuongTru"]);
             }
             conn.Close();

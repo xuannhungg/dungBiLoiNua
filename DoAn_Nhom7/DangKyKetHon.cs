@@ -23,12 +23,11 @@ namespace DoAn_Nhom7
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            if(dbconnection.KiemTraHonNhan(txtGiayToTuyThanNam.Text)==false && dbconnection.KiemTraHonNhan(txtGiayToTuyThanNu.Text)==false)
+            if(dbconnection.KiemTraHonNhan(txtGiayToTuyThanNam.Text)==true && dbconnection.KiemTraHonNhan(txtGiayToTuyThanNu.Text)==true)
             {
-                CongDan cdA = new CongDan(txtGiayToTuyThanNam.Text);
-                cddao.CapNhatKetHon(cdA);
-                CongDan cdB = new CongDan(txtGiayToTuyThanNu.Text);
-                cddao.CapNhatKetHon(cdB);
+                CongDan cdA = new CongDan(txtGiayToTuyThanNam.Text,txtHoTenNam.Text);
+                CongDan cdB = new CongDan(txtGiayToTuyThanNu.Text,txtHoTenNu.Text);
+                cddao.CapNhatKetHon(cdA,cdB);
             }
             else           
                 MessageBox.Show("Co nguoi dang o tinh trang ket hon");               
