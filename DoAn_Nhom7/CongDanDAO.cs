@@ -36,13 +36,15 @@ namespace DoAn_Nhom7
         }
         public void CapNhatLyHon(CongDan cd)
         {
-            string sqlStr = string.Format("UPDATE CongDan SET  tinhTrangHonNhan='Da Ly Hon' WHERE CMND = '{0}'",cd.CMND);
+            string sqlStr = string.Format("UPDATE CongDan SET  tinhTrangHonNhan='Doc Than' WHERE CMND = '{0}'", cd.CMND);
             dbconnection.XuLy(sqlStr);
         }
-        public void CapNhatKetHon(CongDan cd)
+        public void CapNhatKetHon(CongDan nam,CongDan nu)
         {
-            string sqlStr = string.Format("UPDATE CongDan SET  tinhTrangHonNhan='Da Ket Hon' WHERE CMND = '{0}'", cd.CMND);
+            string sqlStr = string.Format("UPDATE CongDan SET  tinhTrangHonNhan='Da Ket Hon Voi Nguoi Co CMND La " + nu.CMND + "' WHERE CMND = '{0}'", nam.CMND);
             dbconnection.XuLy(sqlStr);
+            string sqlStr1 = string.Format("UPDATE CongDan SET  tinhTrangHonNhan='Da Ket Hon Voi Nguoi Co CMND La " + nam.CMND + "' WHERE CMND = '{0}'", nu.CMND);
+            dbconnection.XuLy(sqlStr1);
         }
         public DataSet TimCongDanTheoTinhTrangHonNhan(string tthn, DataGridView dtgv)
         {

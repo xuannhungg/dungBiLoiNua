@@ -250,7 +250,6 @@
             this.txtCMNDB.Name = "txtCMNDB";
             this.txtCMNDB.Size = new System.Drawing.Size(161, 22);
             this.txtCMNDB.TabIndex = 23;
-            this.txtCMNDB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCMNDB_KeyDown);
             // 
             // txtNgayNoiCapB
             // 
@@ -333,6 +332,7 @@
             this.Controls.Add(this.lblMucDe);
             this.Name = "DangKyLyHon";
             this.Text = "DangKyLyHon";
+            this.Load += new System.EventHandler(this.DangKyLyHon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

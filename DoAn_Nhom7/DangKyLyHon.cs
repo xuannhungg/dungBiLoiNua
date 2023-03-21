@@ -24,7 +24,7 @@ namespace DoAn_Nhom7
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            if (dbconnection.KiemTraHonNhan(txtCMNDA.Text) && dbconnection.KiemTraHonNhan(txtCMNDB.Text))
+            if (dbconnection.KiemTraHonNhan(txtCMNDA.Text) == false && dbconnection.KiemTraHonNhan(txtCMNDB.Text) == false)
             {
                 CongDan cdA = new CongDan(txtCMNDA.Text);
                 cddao.CapNhatLyHon(cdA);
@@ -32,25 +32,21 @@ namespace DoAn_Nhom7
                 cddao.CapNhatLyHon(cdB);
             }
             else
-                MessageBox.Show("Co nguoi dang o tinh trang CHUA KET HON");
+                MessageBox.Show("Co nguoi dang o tinh trang Doc Than");
         }
 
         private void txtCMNDA_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dbconnection.LapDayThongTinLyHon(txtCMNDA, txtTenA, txtNamSinhA, txtCuTruA);
+                dbconnection.LapDayThongTinLyHon(txtCMNDA.Text, txtTenA, txtNamSinhA, txtCuTruA);
+                txtCMNDB.Text = dbconnection.CMNDVoChong(txtCMNDA.Text);
+                dbconnection.LapDayThongTinLyHon(txtCMNDB.Text, txtTenB, txtNamSinhB, txtCuTruB);
             }
-
         }
-
-        private void txtCMNDB_KeyDown(object sender, KeyEventArgs e)
+        private void DangKyLyHon_Load(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                dbconnection.LapDayThongTinLyHon(txtCMNDB, txtTenB, txtNamSinhB, txtCuTruB);
-            }
-        }
 
+        }
     }
 }
