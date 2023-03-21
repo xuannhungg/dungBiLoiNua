@@ -69,6 +69,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnKhaiTu = new System.Windows.Forms.Button();
             this.tclChucNang.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -153,21 +154,25 @@
             this.cmbTimKiem.AutoCompleteCustomSource.AddRange(new string[] {
             "dich vu 1",
             "dich vu 2",
-            "Dang ki thuong tru, tam tru, tam vang"});
+            "Dang ki thuong tru, tam tru, tam vang",
+            "Khai tu"});
             this.cmbTimKiem.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cmbTimKiem.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cmbTimKiem.FormattingEnabled = true;
             this.cmbTimKiem.Items.AddRange(new object[] {
             "dich vu 1",
             "dich vu 2",
-            "Dang ki thuong tru, tam tru, tam vang"});
+            "Dang ki thuong tru, tam tru, tam vang",
+            "Khai tu"});
             this.cmbTimKiem.Location = new System.Drawing.Point(171, 14);
             this.cmbTimKiem.Name = "cmbTimKiem";
             this.cmbTimKiem.Size = new System.Drawing.Size(377, 28);
             this.cmbTimKiem.TabIndex = 7;
+            this.cmbTimKiem.SelectedIndexChanged += new System.EventHandler(this.cmbTimKiem_SelectedIndexChanged);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnKhaiTu);
             this.panel1.Controls.Add(this.btnSinhTu);
             this.panel1.Controls.Add(this.bthHonNhan);
             this.panel1.Controls.Add(this.btnThongKeDS);
@@ -515,6 +520,16 @@
             this.tabPage3.Text = "Thong bao";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnKhaiTu
+            // 
+            this.btnKhaiTu.Location = new System.Drawing.Point(600, 153);
+            this.btnKhaiTu.Name = "btnKhaiTu";
+            this.btnKhaiTu.Size = new System.Drawing.Size(114, 79);
+            this.btnKhaiTu.TabIndex = 8;
+            this.btnKhaiTu.Text = "Khai tu";
+            this.btnKhaiTu.UseVisualStyleBackColor = true;
+            this.btnKhaiTu.Click += new System.EventHandler(this.btnKhaiTu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -583,6 +598,7 @@
         private System.Windows.Forms.RadioButton rdbDaKetHon;
         private System.Windows.Forms.Label lblTinhTrang;
         private System.Windows.Forms.RadioButton rdbTatCa;
+        private System.Windows.Forms.Button btnKhaiTu;
     }
 }
 

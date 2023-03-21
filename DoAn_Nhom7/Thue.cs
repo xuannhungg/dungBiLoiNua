@@ -43,6 +43,10 @@ namespace DoAn_Nhom7
             this.MucThue = mucThue;
             this.TinhTrang = tinhTrang;
         }
+        public Thue(string cccd)
+        {
+            this.CCCD = cccd;
+        }
         ~Thue()
         {
 

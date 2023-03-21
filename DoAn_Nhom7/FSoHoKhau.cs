@@ -27,7 +27,6 @@ namespace DoAn_Nhom7
             this.gvSoHoKhau.DataSource = hkdao.DanhSach();
 
         }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             SoHoKhau hk = new SoHoKhau(txtMaKhuVuc.Text, txtXaPhuong.Text, txtQuanHuyen.Text, txtTinhThanhPho.Text, txtCMND.Text, txtMaSoHoKhau.Text, txtHoTenChuHo.Text, txtDiaChi.Text, tpNgayLap.Text);

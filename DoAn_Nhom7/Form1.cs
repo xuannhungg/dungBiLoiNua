@@ -122,5 +122,20 @@ namespace DoAn_Nhom7
             FSoHoKhau form = new FSoHoKhau();
             form.ShowDialog();
         }
+
+        private void cmbTimKiem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTimKiem.Text == "Khai tu")
+            {
+                FKhaiTu form = new FKhaiTu();
+                form.Show();
+            }    
+        }
+
+        private void btnKhaiTu_Click(object sender, EventArgs e)
+        {
+            FKhaiTu form = new FKhaiTu();
+            form.Show();
+        }
     }
 }

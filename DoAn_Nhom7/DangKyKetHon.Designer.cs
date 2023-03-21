@@ -298,6 +298,7 @@
             this.Controls.Add(this.lblHoTen);
             this.Name = "DangKyKetHon";
             this.Text = "DangKyKetHon";
+            this.Load += new System.EventHandler(this.DangKyKetHon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -49,5 +49,10 @@ namespace DoAn_Nhom7
                 dbconnection.LapDayThongTin(txtGiayToTuyThanNu, txtHoTenNu, txtNgaySinhNu,txtDanTocNu, txtQuocTichNu, txtNoiCuTruNu);
             }
         }
+
+        private void DangKyKetHon_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

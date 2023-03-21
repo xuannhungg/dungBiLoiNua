@@ -162,6 +162,25 @@ namespace DoAn_Nhom7
             conn.Close();
             return ds;
         }
-
+        public void KhaiTu_KeyDown(TextBox cmnd, TextBox ten, TextBox ngsinh, TextBox honNhan, TextBox noiThuongTru, TextBox gioiTinh, TextBox danToc, TextBox quocTich, TextBox queQuan, TextBox ngheNghiep)
+        {
+            conn.Open();
+            string sqlStr = "Select * from CongDan where cmnd = '" + cmnd.Text + "'";
+            SqlCommand cmd = new SqlCommand(sqlStr, conn);
+            SqlDataReader dta = cmd.ExecuteReader();
+            while (dta.Read())
+            {
+                ten.Text = Convert.ToString(dta["hoTen"]);
+                ngsinh.Text = Convert.ToString(dta["ngayThangNamSinh"]);
+                gioiTinh.Text = Convert.ToString(dta["gioiTinh"]);
+                danToc.Text = Convert.ToString(dta["danToc"]);
+                honNhan.Text = Convert.ToString(dta["tinhTrangHonNhan"]);
+                quocTich.Text = "hhh";
+                queQuan.Text = Convert.ToString(dta["queQuan"]);
+                noiThuongTru.Text = Convert.ToString(dta["noiThuongTru"]);
+                ngheNghiep.Text = Convert.ToString(dta["ngheNghiep"]);
+            }
+            conn.Close();
+        }
     }
 }

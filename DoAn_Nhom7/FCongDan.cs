@@ -49,5 +49,10 @@ namespace DoAn_Nhom7
                 dbconnection.LapDayThongTinCD(txtCCCD, txtHoTen, dTPNgaySinh, txtGioiTinh, txtDanToc, txtHonNhan, txtKhaiSinh, txtQueQuan, txtThuongTru, txtHocVan, txtNgheNghiep, txtLuong);
             }
         }
+
+        private void FCongDan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

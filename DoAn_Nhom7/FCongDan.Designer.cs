@@ -315,6 +315,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FCongDan";
             this.Text = "Cong Dan";
+            this.Load += new System.EventHandler(this.FCongDan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

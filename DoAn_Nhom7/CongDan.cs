@@ -93,6 +93,18 @@ namespace DoAn_Nhom7
         {            
             this.cmnd = Cmnd;
         }
+        public CongDan(string cccd, string hoTen, string ngayThangNamSinh, string gioiTinh, string danToc, string tinhTrangHonNhan, string queQuan, string noiThuongTru, string ngheNghiep)
+        {
+            this.CMND = cccd;
+            this.HoTen = hoTen;
+            this.NgayThangNamSinh = ngayThangNamSinh;
+            this.GioiTinh = gioiTinh;
+            this.DanToc = danToc;
+            this.TinhTrangHonNhan = tinhTrangHonNhan;
+            this.QueQuan = queQuan;
+            this.NoiThuongTru = noiThuongTru;
+            this.NgheNghiep = ngheNghiep;
+        }
         ~CongDan()
         {
 
